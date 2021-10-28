@@ -24,6 +24,7 @@ private void OnDisable () {
 	ConsoleMessageHandler.StopListening (_messageEnvets [1]);
 	ConsoleMessageHandler.StopListening (_messageEnvets [2]);
 	ConsoleMessageHandler.StopListening (_messageEnvets [3]);
+	ConsoleMessageHandler.StopListening (_messageEnvets [4]);
 }
 
 private void Update () {
