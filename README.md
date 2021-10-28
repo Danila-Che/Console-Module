@@ -11,26 +11,26 @@
 ```C#
 private List<MessageEventSignature> _messageEnvets = new List<MessageEventSignature> ();
 
-	private void OnEnable () {
-		_messageEnvets.Add (ConsoleMessageHandler.Instance.AddNotification ("Заслонка закрыта"));
-		_messageEnvets.Add (ConsoleMessageHandler.Instance.AddNotification ("Заслонка открыта"));
-		_messageEnvets.Add (ConsoleMessageHandler.Instance.AddNotification ("Эта запись не логируется", log: false));
-		_messageEnvets.Add (ConsoleMessageHandler.Instance.AddWarning ("Проверьте положение заслонки"));
-		_messageEnvets.Add (ConsoleMessageHandler.Instance.AddError ("Произошла остановка имитатора впускного коллектора"));
-	}
+private void OnEnable () {
+	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddNotification ("Заслонка закрыта"));
+	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddNotification ("Заслонка открыта"));
+	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddNotification ("Эта запись не логируется", log: false));
+	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddWarning ("Проверьте положение заслонки"));
+	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddError ("Произошла остановка имитатора впускного коллектора"));
+}
 
-	private void OnDisable () {
-		ConsoleMessageHandler.StopListening (_messageEnvets [0]);
-		ConsoleMessageHandler.StopListening (_messageEnvets [1]);
-		ConsoleMessageHandler.StopListening (_messageEnvets [2]);
-		ConsoleMessageHandler.StopListening (_messageEnvets [3]);
-	}
+private void OnDisable () {
+	ConsoleMessageHandler.StopListening (_messageEnvets [0]);
+	ConsoleMessageHandler.StopListening (_messageEnvets [1]);
+	ConsoleMessageHandler.StopListening (_messageEnvets [2]);
+	ConsoleMessageHandler.StopListening (_messageEnvets [3]);
+}
 
-	private void Update () {
-		if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyDown (KeyCode.Space)) {
-			ConsoleMessageHandler.TriggerEvent (_messageEnvets [Random.Range (0, _messageEnvets.Count)]);
-		}
+private void Update () {
+	if (Input.GetKey (KeyCode.LeftControl) && Input.GetKeyDown (KeyCode.Space)) {
+		ConsoleMessageHandler.TriggerEvent (_messageEnvets [Random.Range (0, _messageEnvets.Count)]);
 	}
+}
 ```
 
 Обработчик сообщений является Event Listener'ом, поэтому в его основе лежит синглетон. И поэтому можно вызвать его из любой сцены
