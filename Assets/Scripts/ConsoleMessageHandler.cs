@@ -16,16 +16,16 @@ namespace ConsoleModule {
             _messagesShowedOnlyInConsole.Clear ();
         }
 
-        public MessageEventSignature AddNotification (string message, bool log = true) {
-            return AddMessage (message, Color.blue, LogsTypes.Notification, log);
+        public static MessageEventSignature AddNotification (string message, bool log = true) {
+            return Instance.AddMessage (message, Color.blue, LogsTypes.Notification, log);
         }
 
-        public MessageEventSignature AddWarning (string message, bool log = true) {
-            return AddMessage (message, Color.yellow, LogsTypes.Warning, log);
+        public static MessageEventSignature AddWarning (string message, bool log = true) {
+            return Instance.AddMessage (message, Color.yellow, LogsTypes.Warning, log);
         }
 
-        public MessageEventSignature AddError (string message, bool log = true) {
-            return AddMessage (message, Color.red, LogsTypes.Error, log);
+        public static MessageEventSignature AddError (string message, bool log = true) {
+            return Instance.AddMessage (message, Color.red, LogsTypes.Error, log);
         }
 
         private MessageEventSignature AddMessage (string messageText, Color color, LogsTypes logType, bool log) {

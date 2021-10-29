@@ -9,7 +9,7 @@ namespace ConsoleModule {
         private static T _eventListner;
         private readonly static object consoleLock = new object ();
 
-        public static T Instance {
+        protected static T Instance {
             get {
                 lock (consoleLock) {
                     if (!_eventListner) {
