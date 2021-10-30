@@ -13,11 +13,11 @@
 private List<MessageEventSignature> _messageEnvets = new List<MessageEventSignature> ();
 
 private void OnEnable () {
-	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddNotification ("Заслонка закрыта"));
-	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddNotification ("Заслонка открыта"));
-	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddNotification ("Эта запись не логируется", log: false));
-	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddWarning ("Проверьте положение заслонки"));
-	_messageEnvets.Add (ConsoleMessageHandler.Instance.AddError ("Произошла остановка имитатора впускного коллектора"));
+	_messageEnvets.Add (ConsoleMessageHandler.AddNotification ("Заслонка закрыта"));
+	_messageEnvets.Add (ConsoleMessageHandler.AddNotification ("Заслонка открыта"));
+	_messageEnvets.Add (ConsoleMessageHandler.AddNotification ("Эта запись не логируется", log: false));
+	_messageEnvets.Add (ConsoleMessageHandler.AddWarning ("Проверьте положение заслонки"));
+	_messageEnvets.Add (ConsoleMessageHandler.AddError ("Произошла остановка имитатора впускного коллектора"));
 }
 
 private void OnDisable () {
