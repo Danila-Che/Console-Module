@@ -1,0 +1,109 @@
+.regular-container {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 255);
+    background-color: rgba(100, 100, 100, 0.39);
+    margin-bottom: 5px;
+    justify-content: center;
+    padding-left: 5px;
+}
+
+.regular-text-input {
+    font-size: 14px;
+}
+
+.regular-text-input > .unity-base-field__input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.regular-log {
+    font-size: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(70, 210, 210, 255);
+}
+
+.error-log {
+    font-size: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(210, 70, 70);
+}
+
+.warning-log {
+    font-size: 12px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgb(210, 210, 70);
+}
+
+.regular-hint {
+    color: rgba(255, 255, 255, 255);
+    font-size: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.regular-hint-highlighted {
+    color: rgb(70, 210, 70);
+    font-size: 12px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.regular-hint-border {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: resource('pro/actionTreeBackground');
+}
